@@ -8,7 +8,8 @@ def sleep_in(weekday, vacation):
     sleep_in(True, False) → False
     sleep_in(False, True) → True
     """
-    return
+
+    return not weekday or vacation
 
 
 def monkey_trouble(a_smile, b_smile):
@@ -21,7 +22,9 @@ def monkey_trouble(a_smile, b_smile):
     monkey_trouble(False, False) → True
     monkey_trouble(True, False) → False
     """
-    return
+
+    # return (a_smile and b_smile) or (not a_smile and not b_smile)
+    return a_smile == b_smile
 
 
 def sum_double(a, b):
@@ -33,7 +36,13 @@ def sum_double(a, b):
     sum_double(3, 2) → 5
     sum_double(2, 2) → 8
     """
-    return
+
+    # if a == b:
+    #     return 2 * (a + b)
+
+    # return a + b
+
+    return 2 * (a + b) if a == b else a + b
 
 
 def diff21(n):
@@ -45,7 +54,11 @@ def diff21(n):
     diff21(10) → 11
     diff21(21) → 0
     """
-    return
+
+    if n > 21:
+        return 2 * (n - 21)
+
+    return 21 - n
 
 
 def parrot_trouble(talking, hour):
@@ -58,7 +71,8 @@ def parrot_trouble(talking, hour):
     parrot_trouble(True, 7) → False
     parrot_trouble(False, 6) → False
     """
-    return
+    # return (hour < 7 or hour > 20) and talking
+    return not (7 <= hour <= 20) and talking
 
 
 def makes10(a, b):
@@ -69,7 +83,7 @@ def makes10(a, b):
     makes10(9, 9) → False
     makes10(1, 9) → True
     """
-    return
+    return (a == 10 or b == 10) or (a + b) == 10
 
 
 def near_hundred(n):
