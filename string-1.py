@@ -7,7 +7,7 @@ def hello_name(str):
     hello_name('Alice') → 'Hello Alice!'
     hello_name('X') → 'Hello X!'
     """
-    return
+    return f"Hello {str}!"
 
 
 def make_abba(str1, str2):
@@ -19,7 +19,7 @@ def make_abba(str1, str2):
     make_abba('Yo', 'Alice') → 'YoAliceAliceYo'
     make_abba('What', 'Up') → 'WhatUpUpWhat'
     """
-    return
+    return str1 + str2 + str2 + str1
 
 
 def make_tags(tag, word):
@@ -33,7 +33,7 @@ def make_tags(tag, word):
     make_tags('i', 'Hello') → '<i>Hello</i>'
     make_tags('cite', 'Yay') → '<cite>Yay</cite>'
     """
-    return
+    return f"<{tag}>{word}</{tag}>"
 
 
 def make_out_word(out, word):
@@ -46,7 +46,7 @@ def make_out_word(out, word):
     make_out_word('<<>>', 'WooHoo') → '<<WooHoo>>'
     make_out_word('[[]]', 'word') → '[[word]]'
     """
-    return
+    return out[:2] + word + out[2:]
 
 
 def extra_end(str):
