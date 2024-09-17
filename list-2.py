@@ -48,7 +48,20 @@ def sum13(nums):
     sum13([1, 2, 2, 1]) → 6
     sum13([1, 1]) → 2
     sum13([1, 2, 2, 1, 13]) → 6"""
-    return
+
+    total = 0
+
+    should_skip = False
+
+    for num in nums:
+        if num == 13:
+            should_skip = True
+        if not should_skip:
+            total = total + num
+        if num != 13:
+            should_skip = False
+
+    return total
 
 
 def sum67(nums):

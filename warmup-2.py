@@ -58,7 +58,14 @@ def array_count9(nums):
     array_count9([1, 9, 9]) → 2
     array_count9([1, 9, 9, 3, 9]) → 3
     """
-    return
+
+    count = 0
+
+    for num in nums:
+        if num == 9:
+            count = count + 1
+
+    return count
 
 
 def array_front9(nums):
